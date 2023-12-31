@@ -1,55 +1,37 @@
-const express = require('express')
-const handleGetHealth = require('../controlers/handleGetHealth')
-const handleGetSports = require('../controlers/handleGetSports')
-const handleGetBusiness = require('../controlers/handleGetBusiness')
-const handleBusiness = require('../controlers/handleBusiness')
-const handleHealth = require('../controlers/handleHealth')
-const handlesports = require('../controlers/handleSports')
-const handleworld = require('../controlers/handleWorld')
-const handlepolitics = require('../controlers/handlePolitics')
-const handleEntertainment = require('../controlers/handleEntertainment')
-const handleOpinion = require('../controlers/handleOpinion')
-const handleStyle = require('../controlers/handleStyle')
-const handleGetStyle = require('../controlers/handleGetStyle')
-const handleGetTravle = require('../controlers/handleGetTravles')
-const handleGetOpinion = require('../controlers/handleGetOpinion')
-const handleGetPolitics = require('../controlers/handleGetPolitics')
-const handleGetWorld = require('../controlers/handleGetWorld')
+const express = require("express");
+const handleBusiness = require("../controlers/handleBusiness");
+const handleHealth = require("../controlers/handleHealth");
+const handlesports = require("../controlers/handleSports");
+const handleworld = require("../controlers/handleWorld");
+const handlepolitics = require("../controlers/handlePolitics");
+const handleEntertainment = require("../controlers/handleEntertainment");
+const handleOpinion = require("../controlers/handleOpinion");
+const handleStyle = require("../controlers/handleStyle");
+const handleGetSingleNews = require("../controlers/handleGetSingleNews");
+const handleHome = require("../controlers/handleHome");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/sport/:id', handleGetSports)
+router.post("/single", handleGetSingleNews);
 
-router.get('/business/:id', handleGetBusiness)
+router.get("/", handleHome);
 
-router.get('/style/:id', handleGetStyle)
+router.get("/business", handleBusiness);
 
-router.get('/travle/:id', handleGetTravle)
+router.get("/health", handleHealth);
 
-router.get('/opinion/:id', handleGetOpinion)
+router.get("/world", handleworld);
 
-router.get('/politics/:id', handleGetPolitics)
+router.get("/politics", handlepolitics);
 
-router.get('/world/:id', handleGetWorld)
+router.get("/sport", handlesports);
 
-router.get('/business', handleBusiness)
+router.get("/opinion", handleOpinion);
 
-router.get('/health', handleHealth)
+router.get("/opinion", handleOpinion);
 
-router.get('/world', handleworld)
+router.get("/style", handleStyle);
 
-router.get('/politics', handlepolitics)
+router.get("/entertainment", handleEntertainment);
 
-router.get('/sport', handlesports)
-
-router.get('/opinion', handleOpinion)
-
-router.get('/opinion', handleOpinion)
-
-router.get('/style', handleStyle)
-
-router.get('/entertainment', handleEntertainment)
-
-router.get('/health/:id', handleGetHealth)
-
-module.exports = router
+module.exports = router;
