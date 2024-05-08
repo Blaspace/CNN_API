@@ -35,7 +35,7 @@ curl http://localhost:3000/api/news
 - `cheerio`: For parsing HTML and extracting data from web pages.
 
 ## Front-End
-For a front-end application that consumes the API provided by this backend, check out the [CNN News Front-End](https://github.com/your_username/cnn-news-frontend) repository.
+For a front-end application that consumes the API provided by this backend, check out the [CNN News Front-End](https://newsweb-i8wp.onrender.com).
 
 ## Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request.
