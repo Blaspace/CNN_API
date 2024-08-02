@@ -1,5 +1,5 @@
-const cheerio = require("cheerio");
-const axios = require("axios");
+import cheerio from "cheerio";
+import axios from "axios";
 
 const handleGetOpinion = async (req, res) => {
   const link = `https://edition.cnn.com/sport/${req?.params?.id}`;
@@ -22,4 +22,4 @@ const handleGetOpinion = async (req, res) => {
   res.send(items);
 };
 
-module.exports = handleGetOpinion;
+export default handleGetOpinion;

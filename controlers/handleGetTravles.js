@@ -1,5 +1,5 @@
-const cheerio = require('cheerio')
-const axios = require('axios')
+import cheerio from "cheerio";
+import axios from "axios";
 
 const handleGetTravle =async(req, res)=>{
     const link = `https://edition.cnn.com/travle/${req?.params?.id}`
@@ -16,4 +16,4 @@ const handleGetTravle =async(req, res)=>{
     res.send(items);
     }
 
-    module.exports = handleGetTravle
+    export default handleGetTravle

@@ -1,5 +1,5 @@
-const cheerio = require('cheerio')
-const axios = require('axios')
+import cheerio from "cheerio";
+import axios from "axios";
 
 const handleGetSports =async(req, res)=>{
     const items =[]
@@ -17,4 +17,4 @@ const handleGetSports =async(req, res)=>{
     res.send(items);
     }
 
-    module.exports = handleGetSports
+    export default handleGetSports

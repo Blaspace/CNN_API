@@ -1,14 +1,14 @@
-const express = require("express");
-const handleBusiness = require("../controlers/handleBusiness");
-const handleHealth = require("../controlers/handleHealth");
-const handlesports = require("../controlers/handleSports");
-const handleworld = require("../controlers/handleWorld");
-const handlepolitics = require("../controlers/handlePolitics");
-const handleEntertainment = require("../controlers/handleEntertainment");
-const handleOpinion = require("../controlers/handleOpinion");
-const handleStyle = require("../controlers/handleStyle");
-const handleGetSingleNews = require("../controlers/handleGetSingleNews");
-const handleHome = require("../controlers/handleHome");
+import express from "express";
+import handleBusiness from "../controlers/handleBusiness.js";
+import handleHealth from "../controlers/handleHealth.js";
+import handlesports from "../controlers/handleSports.js";
+import handleworld from "../controlers/handleWorld.js";
+import handlepolitics from "../controlers/handlePolitics.js";
+import handleEntertainment from "../controlers/handleEntertainment.js";
+import handleOpinion from "../controlers/handleOpinion.js";
+import handleStyle from "../controlers/handleStyle.js";
+import handleGetSingleNews from "../controlers/handleGetSingleNews.js";
+import handleHome from "../controlers/handleHome.js";
 
 const router = express.Router();
 
@@ -34,4 +34,4 @@ router.get("/style", handleStyle);
 
 router.get("/entertainment", handleEntertainment);
 
-module.exports = router;
+export default router;

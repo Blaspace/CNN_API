@@ -1,5 +1,5 @@
-const cheerio = require("cheerio");
-const axios = require("axios");
+import cheerio from "cheerio";
+import axios from "axios";
 
 const handleGetSingleNews = async (req, res) => {
   const { url } = req.body;
@@ -23,4 +23,4 @@ const handleGetSingleNews = async (req, res) => {
   res.send(items);
 };
 
-module.exports = handleGetSingleNews;
+export default handleGetSingleNews;

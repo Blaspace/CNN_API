@@ -1,5 +1,5 @@
-const cheerio = require("cheerio");
-const axios = require('axios')
+import cheerio from "cheerio";
+import axios from "axios";
 
 const handleHome = async (req, res) => {
   const items = [];
@@ -23,4 +23,4 @@ const handleHome = async (req, res) => {
   res.send(items);
 };
 
-module.exports = handleHome;
+export default handleHome;
