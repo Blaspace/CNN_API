@@ -1,26 +1,29 @@
-import cheerio from "cheerio";
+import * as cheerio from 'cheerio'
 import axios from "axios";
 
 const handleHome = async (req, res) => {
   const items = [];
-  const link = `https://edition.cnn.com/`;
+  const link = `https://guardian.ng`;
 
   const response = await axios(link);
   const html = response.data;
   const $ = cheerio.load(html);
-  $(".card", html).each((index, value) => {
+  $(".item", html).each((index, value) => {
     const url = $(value).find("a").attr("href");
-    const text = $(value).find(".container__headline-text").text();
-    const img = $(value).find("source").attr("srcset");
+    //const header = $(value).find()
+    const text = $(value).find('.headline').text();
+    const img = $(value).find("img").attr("src");
     items.push({
-      url: `https://edition.cnn.com${url}`,
+      url: `${url}`,
       text,
-      img,
+      img: `${img}`,
       title: "Home",
-      heading: "CNN News",
+      heading: "Guardian News",
     });
   });
   res.send(items);
 };
 
+
 export default handleHome;
+

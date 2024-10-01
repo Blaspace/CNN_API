@@ -1,4 +1,4 @@
-import cheerio from "cheerio";
+import * as cheerio from 'cheerio'
 import axios from "axios";
 
 const handleGetSingleNews = async (req, res) => {
@@ -13,8 +13,7 @@ const handleGetSingleNews = async (req, res) => {
     const t = $(v).text();
     text.push(t);
   });
-  console.log(heading);
-  console.log(text);
+  
 
   const items = {
     heading: heading,

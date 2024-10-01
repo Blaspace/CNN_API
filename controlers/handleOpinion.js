@@ -1,4 +1,4 @@
-import cheerio from "cheerio";
+import * as cheerio from 'cheerio'
 import axios from "axios";
 
 const handleOpinion = async (req, res) => {

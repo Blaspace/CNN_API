@@ -1,5 +1,6 @@
-import cheerio from "cheerio";
 import axios from "axios";
+import * as cheerio from 'cheerio'
+
 
 const handleBusiness = async (req, res) => {
   const items = [];
